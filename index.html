@@ -1,241 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+    <meta
+      name="title"
+      content="Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection"
+    />
+    <meta
+      name="description"
+      content="RACE models creator and editor signals with rhetorical structure to support fine-grained four-class LLM-generated text detection."
+    />
+    <meta
+      name="keywords"
+      content="LLM-generated text detection, rhetorical structure theory, creator-editor modeling, fine-grained detection, discourse graph, ACL 2026"
+    />
+    <meta
+      name="author"
+      content="Yang Li, Qiang Sheng, Zhengjia Wang, Yehan Yang, Danding Wang, Juan Cao"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ICT CAS" />
+    <meta
+      property="og:title"
+      content="Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection"
+    />
+    <meta
+      property="og:description"
+      content="RACE models creator and editor signals with rhetorical structure to support fine-grained four-class LLM-generated text detection."
+    />
+    <meta property="og:url" content="https://liesy.github.io/RACE/" />
+    <meta
+      property="og:image"
+      content="https://liesy.github.io/RACE/static/images/race-introduction.png"
+    />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1918" />
+    <meta property="og:image:alt" content="RACE project page preview" />
+    <meta
+      property="article:published_time"
+      content="2026-01-01T00:00:00.000Z"
+    />
+    <meta property="article:author" content="Yang Li" />
+    <meta property="article:section" content="Research" />
+    <meta property="article:tag" content="LLM-generated text detection" />
+    <meta property="article:tag" content="Rhetorical Structure Theory" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection"
+    />
+    <meta
+      name="twitter:description"
+      content="RACE models creator and editor signals with rhetorical structure to support fine-grained four-class LLM-generated text detection."
+    />
+    <meta
+      name="twitter:image"
+      content="https://liesy.github.io/RACE/static/images/race-introduction.png"
+    />
+    <meta name="twitter:image:alt" content="RACE project page preview" />
+
+    <meta
+      name="citation_title"
+      content="Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection"
+    />
+    <meta name="citation_author" content="Li, Yang" />
+    <meta name="citation_author" content="Sheng, Qiang" />
+    <meta name="citation_author" content="Wang, Zhengjia" />
+    <meta name="citation_author" content="Yang, Yehan" />
+    <meta name="citation_author" content="Wang, Danding" />
+    <meta name="citation_author" content="Cao, Juan" />
+    <meta name="citation_publication_date" content="2026" />
+    <meta name="citation_conference_title" content="ACL 2026" />
+
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <title>RACE | Fine-Grained LLM-Generated Text Detection</title>
+
+    <link rel="icon" type="image/png" href="static/images/logo.png" />
+    <link rel="apple-touch-icon" href="static/images/logo.png" />
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script defer src="static/js/index.js"></script>
+
+    <script type="application/ld+json">
       {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection",
+        "description": "RACE models creator and editor signals with rhetorical structure to support fine-grained four-class LLM-generated text detection.",
+        "author": [
+          { "@type": "Person", "name": "Yang Li" },
+          { "@type": "Person", "name": "Qiang Sheng" },
+          { "@type": "Person", "name": "Zhengjia Wang" },
+          { "@type": "Person", "name": "Yehan Yang" },
+          { "@type": "Person", "name": "Danding Wang" },
+          { "@type": "Person", "name": "Juan Cao" }
+        ],
+        "datePublished": "2026-01-01",
+        "publisher": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "ACL 2026"
+        },
+        "url": "https://liesy.github.io/RACE/",
+        "image": "https://liesy.github.io/RACE/static/images/race-introduction.png",
+        "keywords": [
+          "LLM-generated text detection",
+          "Rhetorical Structure Theory",
+          "creator-editor modeling",
+          "fine-grained detection"
+        ],
+        "abstract": "We study a rigorous four-class setting for fine-grained LLM-generated text detection and propose RACE, which models creator and editor signals with rhetorical structure and EDU-level representations.",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "mainEntity": {
+          "@type": "WebPage",
+          "@id": "https://liesy.github.io/RACE/"
         }
       }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
+    </script>
+
+    <script type="application/ld+json">
       {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+        "url": "https://english.ict.cas.cn/"
       }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
-</head>
-<body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </script>
+  </head>
+  <body>
+    <button
+      class="scroll-to-top"
+      onclick="scrollToTop()"
+      title="Scroll to top"
+      aria-label="Scroll to top"
+    >
+      <i class="fas fa-chevron-up"></i>
     </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+
+    <div class="more-works-container">
+      <button
+        class="more-works-btn"
+        onclick="toggleMoreWorks()"
+        title="View More Works from Our Lab"
+      >
+        <i class="fas fa-flask"></i>
+        More Works
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </button>
+      <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+          <h4>More Works from Our Lab</h4>
+          <button class="close-btn" onclick="toggleMoreWorks()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="works-list">
+          <a
+            href="https://scm.yang-li.cn/"
+            class="work-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="work-info">
+              <h5>
+                From Judgment to Interference: Early Stopping LLM Harmful
+                Outputs via Streaming Content Monitoring
+              </h5>
+              <p>
+                A streaming moderation framework that detects harmful outputs
+                early with token-level monitoring and low latency.
+              </p>
+              <span class="work-venue">NeurIPS 2025</span>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="publication-logo publication-logo-inline">
+                  <img
+                    src="static/images/acl2026-logo.png"
+                    alt="ACL 2026 logo"
+                    loading="eager"
+                  />
+                  <span>ACL 2026 Main Conference</span>
+                </div>
+                <h1 class="title is-1 publication-title">
+                  Beyond the Final Actor: Modeling the Dual Roles of Creator and
+                  Editor for Fine-Grained LLM-Generated Text Detection
+                </h1>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"
+                    ><a
+                      href="https://www.yang-li.cn/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Yang Li</a
+                    >,</span
+                  >
+                  <span class="author-block"
+                    ><a
+                      href="https://sheng-qiang.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Qiang Sheng</a
+                    >,</span
+                  >
+                  <span class="author-block"
+                    ><a
+                      href="https://zhengjiawa.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Zhengjia Wang</a
+                    >,</span
+                  >
+                  <span class="author-block"
+                    ><a
+                      href="http://undground.fun/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Yehan Yang</a
+                    >,</span
+                  >
+                  <span class="author-block"
+                    ><a
+                      href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ&hl=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Danding Wang</a
+                    >,</span
+                  >
+                  <span class="author-block"
+                    ><a
+                      href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ&hl=zh-CN&oi=ao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Juan Cao</a
+                    ></span
+                  >
+                </div>
+
+                <div class="is-size-5 publication-authors">
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    Institute of Computing Technology, Chinese Academy of
+                    Sciences<br />
+                    University of Chinese Academy of Sciences
                   </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
+                </div>
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block">
+                      <a
+                        href="https://github.com/ICTMCG/RACE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                      >
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
@@ -243,179 +283,320 @@
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <a
+                        href="https://github.com/ICTMCG/RACE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                      >
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
                     </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-scroll"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+      <section class="section hero is-light">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  The misuse of large language models (LLMs) requires precise
+                  detection of synthetic text. Existing works mainly follow
+                  binary or ternary classification settings, which can only
+                  distinguish pure human/LLM text or collaborative text at best.
+                  This remains insufficient for the nuanced regulation, as the
+                  LLM-polished human text and humanized LLM text often trigger
+                  different policy consequences. In this paper, we explore
+                  fine-grained LLM-generated text detection under a rigorous
+                  four-class setting. To handle such complexities, we propose
+                  RACE (Rhetorical Analysis for Creator-Editor Modeling), a
+                  fine-grained detection method that characterizes the distinct
+                  signatures of creator and editor. Specifically, RACE utilizes
+                  Rhetorical Structure Theory to construct a logic graph for the
+                  creator's foundation while extracting EDU-level features for
+                  the editor's style. Experiments show that RACE outperforms 11
+                  baselines in identifying fine-grained types with low false
+                  alarms, offering a policy-aligned solution for LLM regulation.
+                </p>
+              </div>
+              <article class="project-figure figure-medium">
+                <div class="project-figure-media">
+                  <img
+                    src="static/images/race-introduction.png"
+                    alt="RACE introduction figure showing the creator-editor four-class setting"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-figure-caption">
+                  <h3 class="subtitle has-text-centered">
+                    Illustration of our research scope. (a) A Creator-Editor
+                    framework for categorizing different types of texts in
+                    fine-grained LLM-generated text detection. (b) Comparison of
+                    the existing settings and the complex 4-class setting that
+                    we focus on in this paper.
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">
+            Preliminaries: Rhetorical structure provides a stable view of the
+            creator's discourse organization.
+          </h2>
+          <div class="content has-text-justified">
+            <p>
+              RACE builds on Rhetorical Structure Theory, which represents a
+              document as a hierarchy of elementary discourse units linked by
+              rhetorical relations such as Elaboration, Contrast, and
+              Background. This structure captures how a text is organized rather
+              than only how it is phrased.
+            </p>
+            <p>
+              The motivating analysis shows that creator traits persist even
+              after editing. Human-created texts tend to exhibit deeper
+              rhetorical hierarchies and stronger context-establishing
+              relations, while LLM-created texts rely more on flatter,
+              surface-level discourse patterns. Those tendencies remain visible
+              in polished and humanized variants, which supports explicit
+              creator-editor modeling.
+            </p>
+          </div>
+          <article class="project-figure figure-narrow">
+            <div class="project-figure-media">
+              <img
+                src="static/images/race-preliminaries.png"
+                alt="RST relation analysis for RACE preliminaries"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-figure-caption">
+              <h3 class="subtitle has-text-centered">
+                Distribution of RST relations. (a) Divergence of Creators: Human
+                creators build deeper rhetorical hierarchies (e.g., Attribution,
+                Background), whereas LLMs produce flatter structures relying on
+                surface-level relations (e.g., Elaboration, Evaluation). (b)
+                LLM-Polished: underlying human architecture persists. (c)
+                Humanized: underlying LLM architecture persists.
+              </h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">
+            Proposed Method: Rhetorical Analysis for Creator-Editor Modeling
+          </h2>
+          <div class="content has-text-justified">
+            <p>
+              RACE extracts two complementary traces from each document. The
+              editor trace comes from EDU-level representations that preserve
+              local semantic and stylistic refinements. The creator trace comes
+              from a rhetoric-aware graph built from the document's RST parse,
+              which encodes logical dependencies between discourse units.
+            </p>
+            <p>
+              The graph is initialized with descendant span pooling and a
+              bottleneck projection so that relation nodes carry semantically
+              meaningful yet compact structural signals. Rhetoric-guided message
+              passing then propagates information with relation-specific
+              transformations, allowing the model to capture distinct discourse
+              patterns beyond shallow lexical artifacts.
+            </p>
+            <p>
+              Finally, RACE reads out the root representation of the discourse
+              graph and predicts one of the four fine-grained labels. This
+              design directly matches the paper's central claim: creator
+              identity is most robustly reflected in logical organization, while
+              editor identity is expressed through local wording choices.
+            </p>
+          </div>
+          <article class="project-figure figure-wide">
+            <div class="project-figure-media">
+              <img
+                src="static/images/race-method.png"
+                alt="Overall architecture of RACE"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-figure-caption">
+              <h3 class="subtitle has-text-centered">
+                Overall architecture of RACE. Given a text piece, RACE (a) first
+                captures both creator and editor traces through rhetorical
+                structure construction and elementary discourse unit extraction.
+                (b) These dual traces are then transformed into a logic-aware
+                graph, where both linguistic expression and logical organization
+                signals are encoded into node features via descendant span
+                pooling and relation-aware projection. (c) Next, Rhetoric-Guided
+                Message Passing propagates information through relation-specific
+                aggregation with basis decomposition to capture complex
+                rhetorical dependencies. (d) Finally, the global text
+                representation is obtained via root pooling for classification.
+              </h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Experiments</h2>
+          <div class="content has-text-justified">
+            <p>
+              Experiments are conducted on a reorganized four-class split of
+              HART, covering Human-Written, LLM-Polished, LLM-Generated, and
+              Humanized text. The evaluation emphasizes macro AUROC and TPR@1%
+              FPR, which prioritizes reliable ranking quality and strong recall
+              under strict false-alarm control.
+            </p>
+            <p>
+              RACE is compared with 11 adapted baselines spanning learning-based
+              and metric-based detectors. The main result is that explicit
+              creator-editor modeling yields the strongest average TPR@1% FPR,
+              with especially clear gains on the difficult LLM-Polished and
+              LLM-Generated categories.
+            </p>
+            <p>
+              Ablation studies further show that rhetorical relations,
+              contrastive learning, the bottleneck projection, and basis
+              decomposition all contribute to the final behavior. Additional
+              analysis indicates that RACE learns a more discriminative feature
+              space, remains competitive under domain shift, and performs better
+              than strong discourse-aware baselines on shorter inputs.
+            </p>
+          </div>
+
+          <article class="project-figure" style="margin-bottom: 2rem">
+            <div class="project-figure-media">
+              <img
+                src="static/images/tabel2.png"
+                alt="Quantitative comparison of detection methods under the 4-class setting"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-figure-caption">
+              <h3 class="subtitle has-text-centered">
+                Quantitative comparison of detection methods under the 4-class
+                setting. For RACE, we report the results across three runs using
+                different seeds in the format of the mean ± std. Bold and
+                underlined values denote the best and second-best performance,
+                respectively.
+              </h3>
+            </div>
+          </article>
+
+          <article class="project-figure figure-medium">
+            <div class="project-figure-media">
+              <img
+                src="static/images/race-experiments.png"
+                alt="RACE experiment analysis across varying text lengths"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-figure-caption">
+              <h3 class="subtitle has-text-centered">
+                Analysis of detection performance of CoCo and our proposed RACE
+                across varying text lengths.
+              </h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Conclusion</h2>
+          <div class="content has-text-justified">
+            <p>
+              We explored the four-class setting in fine-grained LLM-generated
+              text detection, to distinguish human-written text, LLM-generated
+              text, LLM-polished human text, and humanized LLM text.
+            </p>
+            <p>
+              We modeled the dual roles of creator and editor through rhetorical
+              structure construction and elementary discourse unit extraction,
+              and designed the detector, RACE.
+            </p>
+            <p>
+              By building the logic-aware graph and performing rhetoric-guided
+              message passage, RACE outperformed 11 baselines on the HART
+              benchmark with a low false alarm rate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title">BibTeX</h2>
+            <button
+              class="copy-bibtex-btn"
+              onclick="copyBibTeX()"
+              title="Copy BibTeX to clipboard"
+            >
+              <i class="fas fa-copy"></i>
+              <span class="copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-code"><code>Coming soon.</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the
+                <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Nerfies</a
+                >
+                project page. You are free to borrow the source code of this
+                website, we just ask that you link back to this page in the
+                footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license noopener noreferrer"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Project gallery -->
-<section class="section">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Project Overview</h2>
-      <div class="project-gallery">
-       <article class="project-figure">
-        <!-- TODO: Replace with your research result images -->
-        <div class="project-figure-media">
-          <picture>
-            <source srcset="static/images/carousel1.webp" type="image/webp">
-            <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-          </picture>
-        </div>
-        <div class="project-figure-caption">
-        <h3 class="subtitle has-text-centered">
-          First image description.
-        </h3>
-        </div>
-      </article>
-      <article class="project-figure">
-        <!-- Your image here -->
-        <div class="project-figure-media">
-          <picture>
-            <source srcset="static/images/carousel2.webp" type="image/webp">
-            <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-          </picture>
-        </div>
-        <div class="project-figure-caption">
-        <h3 class="subtitle has-text-centered">
-          Second image description.
-        </h3>
-        </div>
-      </article>
-      <article class="project-figure">
-        <!-- Your image here -->
-        <div class="project-figure-media">
-          <picture>
-            <source srcset="static/images/carousel3.webp" type="image/webp">
-            <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-          </picture>
-        </div>
-        <div class="project-figure-caption">
-        <h3 class="subtitle has-text-centered">
-         Third image description.
-       </h3>
-       </div>
-     </article>
-     <article class="project-figure">
-      <!-- Your image here -->
-      <div class="project-figure-media">
-      <picture>
-        <source srcset="static/images/carousel4.webp" type="image/webp">
-        <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      </picture>
-      </div>
-      <div class="project-figure-caption">
-      <h3 class="subtitle has-text-centered">
-        Fourth image description.
-      </h3>
-      </div>
-    </article>
-  </div>
-</div>
-</div>
-</section>
-<!-- End project gallery -->
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
+    </footer>
   </body>
-  </html>
+</html>

@@ -109,6 +109,38 @@ body {
   color: var(--text-primary) !important;
   margin-bottom: 2rem !important;
   line-height: 1.1 !important;
+  font-size: 2rem !important;
+}
+
+.publication-logo {
+  margin-bottom: 1.25rem;
+}
+
+.publication-logo-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.publication-logo img {
+  display: block;
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.publication-logo-inline img {
+  margin: 0;
+  max-width: 88px;
+}
+
+.publication-logo-inline span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #334155;
 }
 
 .publication-header .hero-body {
@@ -197,6 +229,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .project-figure-caption {
@@ -242,11 +275,32 @@ body {
 .content.has-text-justified {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: #334155;
 }
 
 .content.has-text-justified p {
   margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  margin: -0.75rem auto 2rem;
+  max-width: 760px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.figure-narrow .project-figure-media img {
+  max-width: 78%;
+}
+
+.figure-medium .project-figure-media img {
+  max-width: 86%;
+}
+
+.figure-wide .project-figure-media img {
+  max-width: 92%;
 }
 
 /* Footer Improvements */
@@ -515,9 +569,32 @@ code {
   }
 
   .publication-title {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
+  }
+
+  .publication-logo img {
+    max-width: 88px;
+  }
+
+  .publication-logo-inline {
+    gap: 0.65rem;
+  }
+
+  .publication-logo-inline span {
+    font-size: 1.05rem;
+  }
+
+  .section-subtitle {
+    margin: -0.5rem auto 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .figure-narrow .project-figure-media img,
+  .figure-medium .project-figure-media img,
+  .figure-wide .project-figure-media img {
+    max-width: 100%;
   }
 
   .publication-authors {
@@ -563,7 +640,7 @@ code {
 
 @media screen and (max-width: 480px) {
   .publication-title {
-    font-size: 2rem !important;
+    font-size: 1.65rem !important;
   }
 
   .hero-body {
