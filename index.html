@@ -83,7 +83,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-    <title>RACE | Fine-Grained LLM-Generated Text Detection</title>
+    <title>RACE | ACL 2026 Main</title>
 
     <link rel="icon" type="image/png" href="static/images/logo.png" />
     <link rel="apple-touch-icon" href="static/images/logo.png" />
@@ -330,8 +330,16 @@
                   alarms, offering a policy-aligned solution for LLM regulation.
                 </p>
               </div>
-              <article class="project-figure figure-medium">
-                <div class="project-figure-media">
+              <article
+                class="project-figure project-figure--split figure-medium"
+              >
+                <div
+                  class="project-figure-media"
+                  data-zoomable="true"
+                  role="button"
+                  tabindex="0"
+                  aria-label="Open enlarged view of the RACE introduction figure"
+                >
                   <img
                     src="static/images/race-introduction.png"
                     alt="RACE introduction figure showing the creator-editor four-class setting"
@@ -377,8 +385,16 @@
               creator-editor modeling.
             </p>
           </div>
-          <article class="project-figure figure-narrow">
-            <div class="project-figure-media">
+          <article
+            class="project-figure project-figure--split project-figure--reverse figure-narrow"
+          >
+            <div
+              class="project-figure-media"
+              data-zoomable="true"
+              role="button"
+              tabindex="0"
+              aria-label="Open enlarged view of the RST preliminaries figure"
+            >
               <img
                 src="static/images/race-preliminaries.png"
                 alt="RST relation analysis for RACE preliminaries"
@@ -429,7 +445,13 @@
             </p>
           </div>
           <article class="project-figure figure-wide">
-            <div class="project-figure-media">
+            <div
+              class="project-figure-media"
+              data-zoomable="true"
+              role="button"
+              tabindex="0"
+              aria-label="Open enlarged view of the RACE method figure"
+            >
               <img
                 src="static/images/race-method.png"
                 alt="Overall architecture of RACE"
@@ -484,7 +506,13 @@
           </div>
 
           <article class="project-figure" style="margin-bottom: 2rem">
-            <div class="project-figure-media">
+            <div
+              class="project-figure-media"
+              data-zoomable="true"
+              role="button"
+              tabindex="0"
+              aria-label="Open enlarged view of the quantitative comparison table"
+            >
               <img
                 src="static/images/tabel2.png"
                 alt="Quantitative comparison of detection methods under the 4-class setting"
@@ -502,8 +530,14 @@
             </div>
           </article>
 
-          <article class="project-figure figure-medium">
-            <div class="project-figure-media">
+          <article class="project-figure project-figure--split figure-medium">
+            <div
+              class="project-figure-media"
+              data-zoomable="true"
+              role="button"
+              tabindex="0"
+              aria-label="Open enlarged view of the RACE experiments figure"
+            >
               <img
                 src="static/images/race-experiments.png"
                 alt="RACE experiment analysis across varying text lengths"
@@ -598,5 +632,30 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="image-lightbox"
+      id="imageLightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="imageLightboxCaption"
+      hidden
+    >
+      <div class="image-lightbox-backdrop" data-lightbox-close="true"></div>
+      <div class="image-lightbox-dialog">
+        <button
+          class="image-lightbox-close"
+          type="button"
+          id="imageLightboxClose"
+          aria-label="Close enlarged image preview"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <figure class="image-lightbox-figure">
+          <img id="imageLightboxImage" src="" alt="" />
+          <figcaption id="imageLightboxCaption"></figcaption>
+        </figure>
+      </div>
+    </div>
   </body>
 </html>
