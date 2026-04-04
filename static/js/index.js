@@ -72,6 +72,54 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
+// Temporary Coming soon interaction for the Paper/Code buttons.
+// Remove this block after restoring the real links in index.html.
+function initializeComingSoonButtons() {
+  const wrappers = document.querySelectorAll(".coming-soon-wrapper");
+  if (wrappers.length === 0) return;
+
+  let hideTimer = null;
+
+  function hideAllComingSoon() {
+    wrappers.forEach(function (wrapper) {
+      wrapper.classList.remove("is-visible");
+    });
+  }
+
+  wrappers.forEach(function (wrapper) {
+    const trigger = wrapper.querySelector(".coming-soon-trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", function () {
+      if (hideTimer) {
+        window.clearTimeout(hideTimer);
+      }
+
+      const isVisible = wrapper.classList.contains("is-visible");
+      hideAllComingSoon();
+
+      if (!isVisible) {
+        wrapper.classList.add("is-visible");
+        hideTimer = window.setTimeout(hideAllComingSoon, 1800);
+      }
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!(event.target instanceof Node)) return;
+
+    if (!event.target.parentElement?.closest(".coming-soon-wrapper")) {
+      hideAllComingSoon();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      hideAllComingSoon();
+    }
+  });
+}
+
 function initializeImageLightbox() {
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImage = document.getElementById("imageLightboxImage");
@@ -166,6 +214,7 @@ function initializeImageLightbox() {
 }
 
 initializeImageLightbox();
+initializeComingSoonButtons();
 
 // Show/hide scroll to top button
 window.addEventListener("scroll", function () {

@@ -82,6 +82,61 @@ body {
   margin: 8px 4px;
 }
 
+.link-block .coming-soon-wrapper {
+  margin: 8px 4px;
+}
+
+/* Temporary Coming soon popover for the Paper/Code buttons. Remove after restoring real links. */
+.coming-soon-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.coming-soon-trigger {
+  cursor: pointer;
+}
+
+.coming-soon-popover {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.7rem);
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgb(15 23 42 / 0.94);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
+  z-index: 10;
+}
+
+.coming-soon-popover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.coming-soon-wrapper.is-visible .coming-soon-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 .dnerf {
   font-variant: small-caps;
 }
