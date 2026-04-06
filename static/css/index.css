@@ -794,6 +794,11 @@ code {
 
 /* Mobile Responsive Improvements */
 @media screen and (max-width: 768px) {
+  .scroll-to-top {
+    right: 1rem;
+    bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
   .hero-body {
     padding: 2rem 1rem;
   }
@@ -870,7 +875,7 @@ code {
   }
 
   .more-works-container {
-    bottom: 2rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     right: 1rem;
     top: auto;
   }
@@ -929,7 +934,7 @@ code {
 
   .more-works-container {
     position: fixed;
-    bottom: 2rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     right: 1rem;
     z-index: 1000;
   }
